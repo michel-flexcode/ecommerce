@@ -12,8 +12,8 @@ class Product extends Model
     {
         return $this->belongsTo(Categorie::class);
     }
-    public function PanierPro()
+    public function panierDetails()
     {
-        return $this->belongsTo(PanierPro::class);
+        return $this->hasMany(PanierDetail::class);
     }
 }

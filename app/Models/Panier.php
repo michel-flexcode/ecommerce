@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Panier extends Model
 {
     use HasFactory;
-    public function PanierPro()
+    public function panierDetails()
     {
-        return $this->hasMany(PanierPro::class);
+        // hasMany => nom relation au pluriel
+        return $this->hasMany(PanierDetail::class);
     }
 }
