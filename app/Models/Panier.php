@@ -10,6 +10,6 @@ class Panier extends Model
     use HasFactory;
     public function PanierPro()
     {
-        return $this->belongsToMany(PanierPro::class);
+        return $this->hasMany(PanierPro::class);
     }
 }
