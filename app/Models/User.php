@@ -42,4 +42,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function sellers()
+    {
+        return $this->hasMany(seller::class);
+    }
+
+    public function customers()
+    {
+        return $this->hasMany(customer::class);
+    }
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'user_id', 'follower_id')->withTimestamps();
+    }
 }
