@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\PanierDetail;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,8 +21,24 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+
         $this->call([
-            PostSeeder::class,
+            CustomersSeeder::class,
+        ]);
+        $this->call([
+            SellersSeeder::class,
+        ]);
+        $this->call([
+            PanierSeeder::class,
+        ]);
+        $this->call([
+            ProductsSeeder::class,
+        ]);
+        $this->call([
+            CategorieSeeder::class,
+        ]);
+        $this->call([
+            PanierDetailSeeder::class,
         ]);
     }
 }
