@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-
+        // L'ordre est important, sans le dossier parent, il ne peut pas créer tout
         $this->call([
             CustomersSeeder::class,
         ]);
