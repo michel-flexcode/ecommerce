@@ -16,6 +16,9 @@ class Categorie extends Model
     public static function listingProductsByCat(int $id)
     {
         $cat = Categorie::find($id);
+        if ($cat === null) {
+            return null;
+        }
         return $cat->products;
     }
 }
