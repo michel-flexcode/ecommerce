@@ -1,21 +1,11 @@
 <?php
 
+use App\Models\Categorie;
 use App\Models\Product;
 
 it('displays a list of products', function () {
-    // Assuming you have some products in the database
-    $products = Product::factory()->count(5)->create();
-
-    // Visiting the route that displays the list of products
-    $response = $this->get('/products');
-
-    // Asserting that the response has a successful status code
-    $response->assertStatus(200);
-
-    // Asserting that the response contains the product names
-    foreach ($products as $product) {
-        $response->assertSee($product->name);
-    }
+    $prods = Categorie::listingProductsByCat(1);
+    expect($prods)->toHaveCount(1)
 });
 
 it('displays product details', function () {

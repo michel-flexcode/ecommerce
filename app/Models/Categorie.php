@@ -13,4 +13,9 @@ class Categorie extends Model
     {
         return $this->hasMany(Product::class);
     }
+    public static function listingProductsByCat(int $id)
+    {
+        $cat = Categorie::find($id);
+        return $cat->products;
+    }
 }
