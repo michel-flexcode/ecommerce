@@ -32,11 +32,12 @@ class DatabaseSeeder extends Seeder
             PanierSeeder::class,
         ]);
         $this->call([
-            ProductsSeeder::class,
-        ]);
-        $this->call([
             CategorieSeeder::class,
         ]);
+        $this->call([
+            ProductsSeeder::class,
+        ]);
+
         $this->call([
             PanierDetailSeeder::class,
         ]);

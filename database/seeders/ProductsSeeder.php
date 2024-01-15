@@ -15,9 +15,9 @@ class ProductsSeeder extends Seeder
     {
         // Exemple de données pour les produits
         $productsData = [
-            ['name' => 'Produit 1', 'price' => 10.99],
-            ['name' => 'Produit 2', 'price' => 19.99],
-            ['name' => 'Produit 3', 'price' => 29.99],
+            ['name' => 'Produit 1', 'categorie_id' => 1, 'price' => 10.99],
+            ['name' => 'Produit 2', 'categorie_id' => 2, 'price' => 19.99],
+            ['name' => 'Produit 3', 'categorie_id' => 3, 'price' => 29.99],
             // Ajoutez d'autres produits au besoin
         ];
 

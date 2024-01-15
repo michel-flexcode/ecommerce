@@ -15,9 +15,9 @@ class CategorieSeeder extends Seeder
     {
         // Exemple de données pour la catégorie
         $categoriesData = [
-            ['name' => 'Catégorie 1', 'product_id' => 1],
-            ['name' => 'Catégorie 2', 'product_id' => 2],
-            ['name' => 'Catégorie 3', 'product_id' => 3],
+            ['name' => 'Catégorie 1'],
+            ['name' => 'Catégorie 2'],
+            ['name' => 'Catégorie 3'],
             // Ajoutez d'autres catégories au besoin
         ];
 
