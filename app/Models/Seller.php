@@ -13,4 +13,8 @@ class Seller extends Model
     {
         return $this->belongsTo(user::class);
     }
+    public static function getSellerSales(string $name1)
+    {
+        return Product::where('name', $name1)->get();
+    }
 }
