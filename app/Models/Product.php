@@ -20,4 +20,8 @@ class Product extends Model
     {
         return Product::where('name', $name1)->get();
     }
+    public static function getProductByPrice(float $price)
+    {
+        return Product::where('price', $price)->get();
+    }
 }
