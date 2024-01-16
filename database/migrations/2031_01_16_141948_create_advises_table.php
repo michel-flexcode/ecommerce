@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('advises', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->foreignId('customer_id')->constrained()->onDelete('cascade');
+            $table->text('content'); // Correction : Ajoute la taille (si nécessaire)
             $table->timestamps();
         });
     }
