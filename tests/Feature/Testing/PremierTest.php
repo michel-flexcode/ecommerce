@@ -24,3 +24,11 @@ it('checks name non exsisting Produit', function () {
     $prods = Product::getProductByName('Produit abc');
     expect($prods)->toHaveCount(0);
 });
+
+test('Vérifie la récupération des produits par prix', function () {
+    $products = Product::getProductByPrice('20.00');
+    expect($products[0]->name)->toBe('Produit 1');
+    expect($products[1]->name)->toBe('Produit 2');
+    expect($products[0]->price)->toBeLessThan(17);
+    expect($products[1]->price)->toBeLessThan(21);
+});
