@@ -16,6 +16,11 @@ class Product extends Model
     {
         return $this->hasMany(PanierDetail::class);
     }
+    public function advise()
+    {
+        return $this->hasMany(Advise::class);
+    }
+
     public static function getProductByName(string $name1)
     {
         return Product::where('name', $name1)->get();

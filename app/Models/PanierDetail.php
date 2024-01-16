@@ -12,12 +12,12 @@ class PanierDetail extends Model
 
     public function paniers()
     {
-        return $this->hasMany(panier::class);
+        return $this->hasMany(Panier::class);
     }
     // hasMany => nom relation au pluriel
 
     public function products()
     {
-        return $this->hasMany(product::class);
+        return $this->hasMany(Product::class);
     }
 }

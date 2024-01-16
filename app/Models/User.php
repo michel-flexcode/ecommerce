@@ -45,12 +45,12 @@ class User extends Authenticatable
 
     public function sellers()
     {
-        return $this->hasMany(seller::class);
+        return $this->hasMany(Seller::class);
     }
 
     public function customers()
     {
-        return $this->hasMany(customer::class);
+        return $this->hasMany(Customer::class);
     }
 
     // public function followers()
