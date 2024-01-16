@@ -26,7 +26,7 @@ it('checks name non exsisting Produit', function () {
 });
 
 test('Vérifie la récupération des produits par prix', function () {
-    $products = Product::getProductByPrice('20.00');
+    $products = Product::getProductByPrice('19.99');
     expect($products[0]->name)->toBe('Produit 2');
     expect($products[0]->price)->toBeLessThan(21);
 });
